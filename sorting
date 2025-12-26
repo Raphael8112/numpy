@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOe5bDM2PbtQ4DVmhAVap/k",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Raphael8112/numpy/blob/main/sorting\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "rDG2oTPaZwvP"
+      },
+      "outputs": [],
+      "source": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create the data\n",
+        "student_details ={\n",
+        "    \"Names\":[\"Fred\",\"Jonathan\",\"Melvin\",\"Douglas\",\"Himothy\"],\n",
+        "    \"Scores\":[90,60,70,30,85]\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "mbl1IHwWaO4H"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Before sorting;\",student_details)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3TLdhqb0bIsq",
+        "outputId": "82f3ce28-7e06-4777-f7dd-d417e3bd3424"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Before sorting; {'Names': ['Fred', 'Jonathan', 'Melvin', 'Douglas', 'Himothy'], 'Scores': [90, 60, 70, 30, 85]}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#use numpy to sort the data using scores\n",
+        "sorted_data=np.sort(student_details[\"Scores\"])[::-1]#Sort in descending order\n",
+        "print(\"After sorting\",sorted_data)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aB65GdEIbh_v",
+        "outputId": "e0763bef-b3d2-4f69-df74-646be5e2569f"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After sorting [90 85 70 60 30]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#sort the names\n",
+        "sorted_names=np.sort(student_details[\"Names\"])\n",
+        "print(\"After sorting names;\",sorted_names)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YPYI1YibcOJZ",
+        "outputId": "79899bd1-d448-43b7-b9aa-ae36f7f50725"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After sorting names; ['Douglas' 'Fred' 'Himothy' 'Jonathan' 'Melvin']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
